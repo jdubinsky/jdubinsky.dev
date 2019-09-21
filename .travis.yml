@@ -7,7 +7,7 @@ jobs:
   include:
     - stage: "test"
       name: "unit tests"
-      script: "npm run test"
+      script: "cd src && npm run test"
       env:
         - NODE_ENV=TEST
         - APP_PORT=8080

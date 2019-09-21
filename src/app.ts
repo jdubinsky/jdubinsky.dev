@@ -12,3 +12,5 @@ app.get("/", (request: express.Request, response: express.Response) => {
 });
 
 app.listen(port, () => console.log(`Now listening on port ${port}`));
+
+export default app;
