@@ -8,7 +8,7 @@
     "dev": "ts-node-dev --respawn --transpileOnly ./app.ts",
     "prod": "tsc && node ./build/app.js"
   },
-  "author": "",
+  "author": "Jacob Dubinsky <jacobmdubinsky@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
