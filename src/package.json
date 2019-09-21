@@ -5,12 +5,13 @@
   "main": "app.ts",
   "scripts": {
     "test": "mocha --exit -r ts-node/register ./**/*.spec.ts",
-    "dev": "ts-node-dev --respawn --transpileOnly ./app.ts",
-    "prod": "tsc && node ./build/app.js"
+    "dev": "ts-node-dev --respawn --transpileOnly ./index.ts",
+    "prod": "tsc && node ./build/index.js"
   },
   "author": "Jacob Dubinsky <jacobmdubinsky@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "aws-serverless-express": "^3.3.6",
     "express": "^4.17.1"
   },
   "devDependencies": {
