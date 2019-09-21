@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 10.16.3
+install:
+  - cd src && npm install
+jobs:
+  include:
+    - stage: "test"
+      name: "unit tests"
+      script: "pwd && npm run test"
+      env:
+        - NODE_ENV=TEST
+        - APP_PORT=8080
