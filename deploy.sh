@@ -2,6 +2,7 @@
 
 pushd src
 echo "Installing dev packages..."
+mkdir build
 pwd
 npm install
 
