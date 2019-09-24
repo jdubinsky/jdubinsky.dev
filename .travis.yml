@@ -18,8 +18,6 @@ jobs:
     - stage: deploy
       # if: branch = master
       script: ./deploy.sh
-      env:
-        - NODE_ENV=production
 env:
   global:
     - secure: geQilMWOfgRMpyRIltT2XSEyxfvSW3R8bbtBu9ytOjVVPfSaNHW+Os3pFxRsWIgDw6+ZB9kTzzHS2iGiVL8Li+3zn4TTYdDueMohHF+ZxGhCyjd4HqFq92gVkitf7DoOqCWMbyQuFIzGrWBCJDGSoNmXv4KJ2/QY9Rz909RdBVU5dZlnTeygRNC8zQpbSq3DLa/YI9CBvPmT9v9XvwO9U2vP6TboZwxUtppAxN96rq73H45WjM5xEhhkkarY36O5oCRQPqO6UE0+E3F3u2WMshDr0+e8/ZWblrBmg9zLa1JS4ou/eEusw69PZS30+M/P8AlZw9cPcdrd2ewiIOuWc+z2ZjeH4dq2d6AOPrspagzfind8wQbZuI/dam0WvTPgcTFdKpUJ988G62502Oxdg59mUxzfeUCO+01w/cKHuznGBC5bncjPMH9ovIhYIUvPLxv9/ZNHqBKMVe2h5hIGc0jyjnWa+nnbhJTcFHYFWB6mmrut4AzVy3AFP1aB70b+lVkEqAxNLg60pvwgURzVy3ZWGasQLW5bJbtvRyA8I3PftMN3jIMFQpjL3zCuEBfC4XNwfX9km3K6GsJyN3EBIzwzLcLsUruu22Vxxer2guXAkso3JUamz/5LUVu2jVpz1PBxlWmEOoM/GwmQBddq44SlzY46YG5NX4LF9rDUX20=
