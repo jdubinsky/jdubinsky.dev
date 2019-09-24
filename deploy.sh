@@ -35,6 +35,9 @@ ls
 echo "Deploying to AWS..."
 terraform init
 terraform refresh -state-out=terraform.tfstate
+terraform state pull
+terraform state push terraform.tfstate
+terraform state pull
 # TODO: check that terraform plan output is only lambda
 # terraform apply -input=false
 terraform plan -input=false -state=terraform.tfstate
