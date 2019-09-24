@@ -25,11 +25,11 @@ popd
 
 pushd infra
 echo "Deploying to AWS..."
-terraform init
+terraform init -input=false
 # TODO: check that terraform plan output is only lambda
 # and fail if other infra changes
-terraform plan -input=false
-terraform apply -input=false
+terraform plan -out=tfplan -input=false
+terraform apply -input=false tfplan
 popd
 
 echo "Done!"
