@@ -60,5 +60,12 @@ typings/
 # next.js build output
 .next
 
+# terraform state
+*/.terraform*
+terraform.tfstate*
+
+# lamba builds
+*lambda*.zip
+
 # build
 build/
