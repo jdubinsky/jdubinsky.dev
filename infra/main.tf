@@ -52,6 +52,18 @@ resource "aws_route53_record" "r53rec" {
   }
 }
 
+resource "aws_route53_record" "r53rec2" {
+  name    = "jdubinsky.dev"
+  type    = "A"
+  zone_id = "${aws_route53_zone.root_domain.id}"
+
+  alias {
+    evaluate_target_health = true
+    name                   = "www.jdubinsky.dev"
+    zone_id                = "${aws_route53_zone.root_domain.id}"
+  }
+}
+
 data "aws_iam_policy_document" "policy" {
   statement {
     sid    = ""

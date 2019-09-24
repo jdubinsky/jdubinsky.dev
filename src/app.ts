@@ -1,9 +1,7 @@
-import express from "express";
-import path from "path";
-// const express = require("express");
-// const path = require("path");
+import express = require("express");
+import path = require("path");
 
-const app = express();
+let app = express();
 
 app.use("/static", express.static(path.join(__dirname, "static")));
 
@@ -12,5 +10,4 @@ app.get("/", (request: express.Request, response: express.Response) => {
   return response.sendFile(indexPath);
 });
 
-export default app;
-// module.exports = app;
+export = app;
