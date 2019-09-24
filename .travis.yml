@@ -3,10 +3,9 @@ node_js:
   - 10.16.3
 before_install:
   - curl -sLo /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.12.9/terraform_0.12.9_linux_amd64.zip
-  - unzip /tmp/terraform.zip -d /tmp
-  - mkdir ~/bin
-  - mv /tmp/terraform ~/bin
-  - export PATH="~/bin:$PATH"
+  - unzip /tmp/terraform.zip -d /opt/terraform
+  - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
+  - rm -f /tmp/terraform.zip
 install:
   - pushd src && npm install && popd
 jobs:
