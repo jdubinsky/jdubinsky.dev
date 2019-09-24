@@ -35,6 +35,8 @@ ls
 echo "Deploying to AWS..."
 terraform init
 terraform refresh -state-out=terraform.tfstate
+echo "PRINT STATE"
+cat terraform.tfstate
 terraform state pull
 terraform state push terraform.tfstate
 terraform state pull
