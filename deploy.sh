@@ -32,6 +32,7 @@ pushd infra
 pwd
 ls
 echo "Deploying to AWS..."
+terraform init
 # TODO: check that terraform plan output is only lambda
 # terraform apply -input=false
 terraform plan -input=false

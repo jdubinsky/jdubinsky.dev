@@ -6,7 +6,6 @@ before_install:
   - unzip /tmp/terraform.zip -d /opt/terraform
   - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
   - rm -f /tmp/terraform.zip
-  - terraform init
 install:
   - pushd src && npm install && popd
 jobs:
