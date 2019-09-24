@@ -26,11 +26,10 @@ popd
 pushd infra
 echo "Deploying to AWS..."
 terraform init
-# TODO: pull state from S3
 # TODO: check that terraform plan output is only lambda
-terraform plan -input=false -state=terraform.tfstate
-# terraform apply -input=false -state=terraform.tfstate
-# TODO: push state to S3
+# and fail if other infra changes
+terraform plan -input=false
+terraform apply -input=false
 popd
 
 echo "Done!"
