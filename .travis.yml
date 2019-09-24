@@ -12,7 +12,7 @@ install:
 jobs:
 include:
   - stage: test
-    script: pushd src && npm run test && popd
+    script: ./test.sh
     env:
       - NODE_ENV=test
       - APP_PORT=8080
