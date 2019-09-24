@@ -1,6 +1,9 @@
 #!/bin/bash
 
 pushd src
+echo "Installing dev packages..."
+mkdir build
+npm install
 
 # build js
 echo "Compiling..."
@@ -12,7 +15,7 @@ cp package*.json build/
 cp index.html build/
 
 pushd build
-echo "Installing packages..."
+echo "Installing prod packages..."
 npm install --only=prod
 popd
 
@@ -22,9 +25,11 @@ popd
 
 pushd infra
 echo "Deploying to AWS..."
+terraform init -input=false
 # TODO: check that terraform plan output is only lambda
-# terraform apply -input=false
-terraform plan -input=false
+# and fail if other infra changes
+terraform plan -out=tfplan -input=false
+terraform apply -input=false tfplan
 popd
 
 echo "Done!"
