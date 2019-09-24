@@ -1,6 +1,6 @@
 # jdubinsky.dev personal domain
 
-[www.jdubinsky.dev](www.jdubinsky.dev)
+www.jdubinsky.dev
 
 ## What is it?
 
