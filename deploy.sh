@@ -34,9 +34,10 @@ pwd
 ls
 echo "Deploying to AWS..."
 terraform init
+terraform refresh -state-out=terraform.tfstate
 # TODO: check that terraform plan output is only lambda
 # terraform apply -input=false
-terraform plan -input=false
+terraform plan -input=false -state=terraform.tfstate
 popd
 
 echo "Done!"
