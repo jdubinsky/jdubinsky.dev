@@ -4,13 +4,14 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "test": "mocha --exit -r ts-node/register ./**/*.spec.ts",
-    "dev": "ts-node-dev --respawn --transpileOnly ./app.ts",
-    "prod": "tsc && node ./build/app.js"
+    "test": "npx mocha --exit -r ts-node/register ./**/*.spec.ts",
+    "dev": "npx ts-node-dev --respawn --transpileOnly ./index.ts",
+    "prod": "npx tsc"
   },
   "author": "Jacob Dubinsky <jacobmdubinsky@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "aws-serverless-express": "^3.3.6",
     "express": "^4.17.1"
   },
   "devDependencies": {

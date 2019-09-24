@@ -1,8 +1,7 @@
-import express from "express";
-import path from "path";
+import express = require("express");
+import path = require("path");
 
-const app = express();
-const port = process.env.APP_PORT;
+let app = express();
 
 app.use("/static", express.static(path.join(__dirname, "static")));
 
@@ -11,6 +10,4 @@ app.get("/", (request: express.Request, response: express.Response) => {
   return response.sendFile(indexPath);
 });
 
-app.listen(port, () => console.log(`Now listening on port ${port}`));
-
-export default app;
+export = app;
