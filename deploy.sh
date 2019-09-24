@@ -1,6 +1,8 @@
 #!/bin/bash
 
 pushd src
+echo "Installing dev packages..."
+npm install
 
 # build js
 echo "Compiling..."
@@ -12,7 +14,7 @@ cp package*.json build/
 cp index.html build/
 
 pushd build
-echo "Installing packages..."
+echo "Installing prod packages..."
 npm install --only=prod
 popd
 
