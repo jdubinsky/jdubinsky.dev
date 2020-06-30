@@ -11,19 +11,19 @@
   "author": "Jacob Dubinsky <jacobmdubinsky@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "aws-serverless-express": "^3.3.6",
+    "aws-serverless-express": "^3.3.8",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.3",
-    "@types/express": "^4.17.1",
+    "@types/chai": "^4.2.11",
+    "@types/express": "^4.17.6",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.7.5",
+    "@types/node": "^12.12.47",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "mocha": "^6.2.0",
-    "ts-node": "^8.4.1",
-    "ts-node-dev": "^1.0.0-pre.43",
-    "typescript": "^3.6.3"
+    "mocha": "^8.0.1",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.49",
+    "typescript": "^3.9.5"
   }
 }
