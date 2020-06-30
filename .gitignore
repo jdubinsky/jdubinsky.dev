@@ -69,3 +69,5 @@ terraform.tfstate*
 
 # build
 build/
+
+tfplan
