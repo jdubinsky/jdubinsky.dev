@@ -53,8 +53,8 @@ resource "aws_route53_record" "r53rec" {
 
   alias {
     evaluate_target_health = true
-    name                   = aws_api_gateway_domain_name.apigw_domain_name.cloudfront_domain_name
-    zone_id                = aws_api_gateway_domain_name.apigw_domain_name.cloudfront_zone_id
+    name                   = aws_cloudfront_distribution.apigw_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.apigw_distribution.hosted_zone_id
   }
 }
 
@@ -65,8 +65,8 @@ resource "aws_route53_record" "r53rec-www" {
 
   alias {
     evaluate_target_health = true
-    name                   = aws_api_gateway_domain_name.apigw_domain_name.cloudfront_domain_name
-    zone_id                = aws_api_gateway_domain_name.apigw_domain_name.cloudfront_zone_id
+    name                   = aws_cloudfront_distribution.apigw_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.apigw_distribution.hosted_zone_id
   }
 }
 
