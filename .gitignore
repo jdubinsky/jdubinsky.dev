@@ -71,3 +71,5 @@ terraform.tfstate*
 build/
 
 tfplan
+
+.tags
